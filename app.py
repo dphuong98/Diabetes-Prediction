@@ -20,24 +20,28 @@ def predict():
     
     # Put all form entries values in a list 
     features = [float(i) for i in request.form.values()]
+    del features[:4]
+    features.append(float(request.form['Sex']))
+    features.append(float(request.form['Age']))
+    features.append(float(request.form['Education']))
+    features.append(float(request.form['Income']))
     # Convert features to array
     array_features = [np.array(features)]
     print(array_features)
     # Predict features
     prediction = model.predict(array_features)
-    # prediction = model.predict([[ 4.,  0.,  3.,  3.,  0.,  1.,  0., 10.,  1.,  1.,  1.,  1.,  1., 1.,  1.,  1.,  0.,  4.,  2.,  2.,  1.]])
-    output = prediction
-
-    print(output)
+    print(prediction)
     
     # Check the output values and retrive the result with html tag based on the value
-    if output == 0:
+    if prediction == 0:
         return render_template('diabetes_classifier.html', 
                                result = 'No diabetes')
-    else:
+    elif prediction == 1:
+        return render_template('diabetes_classifier.html', 
+                               result = 'Prediabetes')
+    elif prediction ==2:
         return render_template('diabetes_classifier.html', 
                                result = 'Diabetes')
-
 if __name__ == '__main__':
 #Run the application
     # serve(app, host="127.0.0.1", port=8080)
