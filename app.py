@@ -40,11 +40,11 @@ def predict():
     elif prediction == 1:
         return render_template('diabetes_classifier.html', 
                                features = features,
-                               result = 'Prediabetes')
-    elif prediction ==2:
-        return render_template('diabetes_classifier.html', 
-                               features = features,
                                result = 'Diabetes')
+    # elif prediction ==2:
+    #     return render_template('diabetes_classifier.html', 
+    #                            features = features,
+    #                            result = 'Diabetes')
 if __name__ == '__main__':
 #Run the application
     # serve(app, host="127.0.0.1", port=8080)
