@@ -34,13 +34,16 @@ def predict():
     
     # Check the output values and retrive the result with html tag based on the value
     if prediction == 0:
-        return render_template('diabetes_classifier.html', 
-                               result = 'No diabetes')
+        return render_template('diabetes_classifier.html',
+                                features = features,
+                                result = 'No diabetes')
     elif prediction == 1:
         return render_template('diabetes_classifier.html', 
+                               features = features,
                                result = 'Prediabetes')
     elif prediction ==2:
         return render_template('diabetes_classifier.html', 
+                               features = features,
                                result = 'Diabetes')
 if __name__ == '__main__':
 #Run the application
