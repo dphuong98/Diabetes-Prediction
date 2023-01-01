@@ -15,7 +15,7 @@
             </div>
         </nav>
         <div class="container">
-            <div class="bg-light rounded" style="margin-top: 4rem;">
+            <div class="bg-light rounded" style="margin-top: 5rem;">
                 <!--Form-->
                 <form action="{{url_for('predict')}}" method="POST">
                     <fieldset>
@@ -61,12 +61,12 @@
                                         <option disabled selected value>
                                             -- Select an Option --
                                         </option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
+                                        <option value="1">Preschool</option>
+                                        <option value="2">Elementary</option>
+                                        <option value="3">Some highschool</option>
+                                        <option value="4">Highschool graduate</option>
+                                        <option value="5">Some college or technical school</option>
+                                        <option value="6">College graduate</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-3">
@@ -162,7 +162,7 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-3">
-                                    <label for="PhysActivity">PhysActivity</label>
+                                    <label for="PhysActivity">Exercise</label>
                                     <select class="form-control" id="PhysActivity" name="PhysActivity" required>
                                         <option disabled selected value>
                                             -- Select an Option --
@@ -222,7 +222,7 @@
                             <br>
                             <div class="form-group  row">
                                 <div class="col-sm">
-                                    <label for="NoDocbcCost">NoDocbcCost
+                                    <label for="NoDocbcCost">Avoided doctor due to cost
                                     </label>
                                     <select class="form-control" id="NoDocbcCost" name="NoDocbcCost" required>
                                         <option disabled selected value>
@@ -233,29 +233,29 @@
                                     </select>
                                 </div>
                                 <div class="col-sm">
-                                    <label for="GenHlth">GenHlth
+                                    <label for="GenHlth">General Health
                                     </label>
                                     <select class="form-control" id="GenHlth" name="GenHlth" required>
                                         <option disabled selected value>
                                             -- Select an Option --
                                         </option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
+                                        <option value="1">Excellent</option>
+                                        <option value="2">Very good</option>
+                                        <option value="3">Good</option>
+                                        <option value="4">Fair</option>
+                                        <option value="5">Poor</option>
                                     </select>
                                 </div>
                                 <div class="col-sm">
-                                    <label for="MentHlth">MentHlth</label>
+                                    <label for="MentHlth">Bad mental health in the past month</label>
                                     <input type="number" class="form-control" id="MentHlth" name="MentHlth" min="0" max="30" required>
                                 </div>
                                 <div class="col-sm">
-                                    <label for="PhysHlth">PhysHlth</label>
+                                    <label for="PhysHlth">Injuries in the past month</label>
                                     <input type="number" class="form-control" id="PhysHlth" name="PhysHlth" min="0" max="30" required>
                                 </div>
                                 <div class="col-sm">
-                                    <label for="DiffWalk">DiffWalk
+                                    <label for="DiffWalk">Has trouble walking
                                     </label>
                                     <select class="form-control" id="DiffWalk" name="DiffWalk" required>
                                         <option disabled selected value>
